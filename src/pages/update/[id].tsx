@@ -52,10 +52,14 @@ function Index(props: any) {
     const [link, set_link] = useState("")
     const [state, set_state] = useState("Selangor")
     const [shop, set_shop] = useState("")
-    const [image, setImage] = useState(null);
-    const [start_date, set_start_date] = useState();
-    const [end_date, set_end_date] = useState();
-    const [image_update, set_image_update] = useState(false)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const [image, setImage] = useState<any>(null);
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const [start_date, set_start_date] = useState<any>();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const [end_date, set_end_date] = useState<any>();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const [image_update, set_image_update] = useState<any>(false)
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
     const [createObjectURL, setCreateObjectURL] = useState<any>(null);
     let toast_id;
@@ -124,18 +128,22 @@ function Index(props: any) {
         data.append('state', state);
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         /* @ts-ignore */
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         data.append('image', image);
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         /* @ts-ignore */
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         data.append('start', new Date(start_date).toISOString());
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         /* @ts-ignore */
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         data.append('end', new Date(end_date).toISOString());
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         /* @ts-ignore */
         data.append('visible', false);
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         /* @ts-ignore */
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         data.append('picture', image_update);
 
         try {
@@ -251,6 +259,7 @@ function Index(props: any) {
                         <div className="col-span-6 sm:col-span-3 mt-5">
                             <label htmlFor="country" className="block text-sm font-medium">Start Date</label>
                             <DatePicker
+                                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                                 selected={start_date}
                                 calendarContainer={MyContainer}
                                 dateFormat="MM/dd/yyyy"
@@ -267,6 +276,7 @@ function Index(props: any) {
                         <div className="col-span-6 sm:col-span-3 mt-5">
                             <label htmlFor="country" className="block text-sm font-medium">End Date</label>
                             <DatePicker
+                                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                                 selected={end_date}
                                 calendarContainer={MyContainer}
                                 className="mt-1 block w-full font-mono rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
