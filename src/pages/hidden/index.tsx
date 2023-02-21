@@ -15,7 +15,6 @@ import {
     FcGlobe,
     FcOk,
     FcCancel,
-    FcIdea,
 } from "react-icons/fc";
 import Link from "next/link";
 import * as changeCase from "change-case";
