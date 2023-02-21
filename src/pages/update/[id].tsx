@@ -122,10 +122,20 @@ function Index(props: any) {
         data.append('link', link);
         data.append('shop', shop);
         data.append('state', state);
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        /* @ts-ignore */
         data.append('image', image);
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        /* @ts-ignore */
         data.append('start', new Date(start_date).toISOString());
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        /* @ts-ignore */
         data.append('end', new Date(end_date).toISOString());
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        /* @ts-ignore */
         data.append('visible', false);
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        /* @ts-ignore */
         data.append('picture', image_update);
 
         try {
@@ -145,7 +155,7 @@ function Index(props: any) {
                 autoClose: 3000,
             });
 
-            router.push('/hidden')
+            void router.push('/hidden')
         } catch (error) {
             toast.update(toast_id, {
                 render: "Update Error",
